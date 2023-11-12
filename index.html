@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -23,7 +24,7 @@
         <p>This is not a real online service! You know you need something like this in your life to help
              you realize your deepest dreams. Sign up now and get started.</p>
         <p>You know you want to.</p>
-        <form>
+        <form onsubmit="return false;">
             
             <div class="tab">
                 
@@ -45,11 +46,11 @@
                 </div>
                 <div class="entry">
                     <label for="password">Password</label>
-                    <input type="password" id="password"></input>
+                    <input class="error" type="password" id="password"></input>
                 </div>
                 <div class="entry">
                     <label for="password-confirm">Password Confirm</label>
-                    <input type="password" id="password-confirm"></input>
+                    <input class="error" type="password" id="password-confirm"></input>
                 </div>
             </div>
             <button type="submit">Create Account</button>
