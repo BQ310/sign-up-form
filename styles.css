@@ -8,7 +8,7 @@ body {
 .sidebar {
     position: relative;
     color: white;
-    width: 40%;
+    flex: 1;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 #tree {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     object-fit: cover;
 }
 
@@ -30,27 +30,82 @@ body {
     top: 12rem;
     position: absolute;
     font-family: Nord, 'Times New Roman', Times, serif;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0 1rem 0;
 }
 
 #odin {
     height: 150px;
 }
 
-div.banner > p {
+div.banner>p {
     font-size: 7rem;
     margin: 0px;
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     align-self: flex-end;
 }
 
 /* right panel */
 div.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.panel > p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+div.panel > :not(form), form > :not(div.tab), div.tab > * {
+    margin-left: 24px;
+}
+
+div.tab {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding: 16px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+label, input {
+    display: block;
+}
+
+input {
+    width: 10rem;
+}
+
+input:focus {
+    border-color: blue; 
+}
+
+input:invalid {
+    border-color: red;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    margin-top: 24px;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
 }
